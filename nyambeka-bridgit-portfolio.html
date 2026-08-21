@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nyambeka Bridgit — Model | Storyteller | Visionary</title>
+<title>Miabrita — Model | Creative | Technologist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
@@ -207,6 +207,17 @@
     font-style: italic;
     color: var(--gold);
   }
+  .hero-name-small {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 0.16em;
+    font-weight: 400;
+    letter-spacing: 0.28em;
+    line-height: 1;
+    text-transform: uppercase;
+    color: rgba(245,240,235,0.6);
+    vertical-align: middle;
+  }
   .hero-sub {
     font-size: 0.75rem;
     letter-spacing: 0.3em;
@@ -357,6 +368,92 @@
     font-weight: 300;
     line-height: 1.4;
     color: var(--gold-light);
+  }
+  .identity-credentials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(245,240,235,0.12);
+  }
+  .identity-credential {
+    font-size: 0.68rem;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(245,240,235,0.52);
+  }
+  .identity-credential strong {
+    display: block;
+    color: #e27654;
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+  }
+
+  /* ─── CURRENT FOCUS ─── */
+  #current-focus {
+    padding: 4rem 4rem 10rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .current-focus-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+  }
+  .current-focus-title {
+    font-family: var(--serif);
+    font-size: clamp(2.6rem, 6vw, 5rem);
+    font-weight: 300;
+    line-height: 0.95;
+  }
+  .current-focus-note {
+    max-width: 18rem;
+    font-size: 0.75rem;
+    line-height: 1.7;
+    color: rgba(245,240,235,0.5);
+    text-align: right;
+  }
+  .focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid rgba(245,240,235,0.14);
+    border-bottom: 1px solid rgba(245,240,235,0.14);
+  }
+  .focus-item {
+    min-height: 12rem;
+    padding: 2rem;
+    border-right: 1px solid rgba(245,240,235,0.14);
+    position: relative;
+  }
+  .focus-item:last-child { border-right: 0; }
+  .focus-item::after {
+    content: '↗';
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: #e27654;
+    font-size: 1.1rem;
+  }
+  .focus-number {
+    color: #e27654;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 3rem;
+  }
+  .focus-item h3 {
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
+    font-weight: 300;
+    margin-bottom: 0.7rem;
+  }
+  .focus-item p {
+    max-width: 18rem;
+    font-size: 0.75rem;
+    line-height: 1.7;
+    color: rgba(245,240,235,0.52);
   }
 
   /* ─── CHAPTER 2: PORTFOLIO ─── */
@@ -865,6 +962,78 @@
     to { transform: translateX(-50%); }
   }
 
+  /* ─── ART DIRECTION ─── */
+  body {
+    background:
+      radial-gradient(circle at 8% 18%, rgba(187, 71, 42, 0.18), transparent 24rem),
+      radial-gradient(circle at 92% 52%, rgba(33, 75, 103, 0.2), transparent 28rem),
+      var(--black);
+  }
+  .hero-bg {
+    background:
+      linear-gradient(105deg, rgba(10,10,10,0.96) 0%, rgba(10,10,10,0.62) 43%, rgba(10,10,10,0.1) 100%),
+      linear-gradient(135deg, #4a1e18 0%, #16100f 52%, #0d2029 100%);
+  }
+  .hero-image-placeholder {
+    width: 62%;
+    background:
+      linear-gradient(90deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.18) 45%, rgba(10,10,10,0.04) 100%),
+      url('portrait.jpg') center 20% / cover no-repeat;
+    filter: saturate(0.85) contrast(1.08);
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .hero-image-placeholder::before {
+    content: 'NB / 26';
+    position: absolute;
+    top: 7rem;
+    right: 4rem;
+    color: var(--gold-light);
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    writing-mode: vertical-rl;
+    opacity: 0.8;
+  }
+  .hero-image-placeholder::after {
+    background:
+      linear-gradient(to left, transparent 45%, var(--black) 100%),
+      linear-gradient(to top, rgba(187,71,42,0.2), transparent 40%);
+  }
+  .hero-title em, .identity-text h2 em, .vision-statement em { color: #e27654; }
+  .section-label, .hero-tag, .scroll-text, .hero-img-label,
+  .portfolio-overlay-cat, .transform-panel-label span, .pillar-num,
+  .vision-eyebrow, .contact-detail-label, .signature-name, .video-year { color: #e27654; }
+  .portfolio-grid { gap: 0.8rem; }
+  .portfolio-item, .transform-panel { border: 1px solid rgba(232,213,176,0.18); }
+  .portfolio-item > img, .transform-panel > img, .identity-image img {
+    filter: saturate(0.72) contrast(1.12);
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.8s ease;
+  }
+  .portfolio-item:hover > img, .transform-panel:hover > img {
+    transform: scale(1.06);
+    filter: saturate(1.08) contrast(1.08);
+  }
+  .portfolio-item::before, .transform-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(226,118,84,0.12), transparent 45%, rgba(33,75,103,0.2));
+    mix-blend-mode: screen;
+  }
+  .portfolio-overlay { z-index: 2; }
+  .identity-image {
+    box-shadow: 1.4rem 1.4rem 0 rgba(187,71,42,0.45);
+  }
+  .identity-image-tag, .form-submit:hover { background: #e27654; }
+  .transform-panel:nth-child(1) .transform-panel-bg { background: linear-gradient(160deg, #6c2c1f, #24120f); }
+  .transform-panel:nth-child(2) .transform-panel-bg { background: linear-gradient(160deg, #163e54, #0b161f); }
+  .transform-panel:nth-child(3) .transform-panel-bg { background: linear-gradient(160deg, #4d2438, #1d1018); }
+  .marquee-section { background: rgba(226,118,84,0.045); }
+  .marquee-item { color: rgba(226,118,84,0.72); }
+  .video-wrapper { border-top: 1px solid rgba(226,118,84,0.35); border-bottom: 1px solid rgba(226,118,84,0.35); }
+  .video-label { color: rgba(245,240,235,0.32); }
+
   /* ─── RESPONSIVE ─── */
   @media (max-width: 768px) {
     nav { padding: 1.5rem 2rem; }
@@ -876,6 +1045,13 @@
       gap: 4rem;
       padding: 6rem 2rem;
     }
+    .identity-credentials { grid-template-columns: 1fr; }
+    #current-focus { padding: 2rem 2rem 6rem; }
+    .current-focus-header { display: block; }
+    .current-focus-note { margin-top: 1.5rem; text-align: left; }
+    .focus-grid { grid-template-columns: 1fr; }
+    .focus-item { border-right: 0; border-bottom: 1px solid rgba(245,240,235,0.14); }
+    .focus-item:last-child { border-bottom: 0; }
     .portfolio-grid {
       grid-template-columns: 1fr 1fr;
     }
@@ -903,17 +1079,17 @@
 
 <!-- Loader -->
 <div id="loader">
-  <p class="loader-name">Nyambeka Bridgit</p>
+  <p class="loader-name">Miabrita</p>
   <div class="loader-line"></div>
 </div>
 
 <!-- Navigation -->
 <nav>
-  <a onclick="window.scrollTo({top:0,behavior:'smooth'})" class="nav-logo" style="cursor:none;">N · B</a>
+  <a onclick="window.scrollTo({top:0,behavior:'smooth'})" class="nav-logo" style="cursor:none;">MIABRITA</a>
   <ul class="nav-links">
-    <li><a onclick="navScrollTo('identity')">Identity</a></li>
-    <li><a onclick="navScrollTo('portfolio')">Work</a></li>
-    <li><a onclick="navScrollTo('vision')">Vision</a></li>
+    <li><a onclick="navScrollTo('identity')">About</a></li>
+    <li><a onclick="navScrollTo('portfolio')">Modeling</a></li>
+    <li><a onclick="navScrollTo('vision')">Impact</a></li>
     <li><a onclick="navScrollTo('showreel')">Reel</a></li>
     <li><a onclick="navScrollTo('contact')">Contact</a></li>
   </ul>
@@ -926,11 +1102,11 @@
   <div class="hero-image-placeholder"></div>
   <p class="hero-img-label">Nairobi · 2026</p>
   <div class="hero-content">
-    <p class="hero-tag">Model &nbsp;·&nbsp; Storyteller &nbsp;·&nbsp; Visionary</p>
+    <p class="hero-tag">Model &nbsp;·&nbsp; Creative &nbsp;·&nbsp; Technologist</p>
     <h1 class="hero-title">
-      Nyambeka<br><em>Bridgit</em>
+      <span class="hero-name-small">Nyambeka Bridgit presents</span><br><em>Miabrita</em>
     </h1>
-    <p class="hero-sub">Kenyan Model &nbsp;·&nbsp; High Fashion &nbsp;·&nbsp; Pageantry</p>
+    <p class="hero-sub">Fashion × Technology × Leadership × Impact</p>
     <div class="hero-scroll">
       <div class="scroll-line"></div>
       <span class="scroll-text">Scroll to enter</span>
@@ -946,43 +1122,77 @@
     <span class="marquee-item">Pageantry <span class="marquee-dot">✦</span></span>
     <span class="marquee-item">Commercial <span class="marquee-dot">✦</span></span>
     <span class="marquee-item">Nairobi · Kenya <span class="marquee-dot">✦</span></span>
-    <span class="marquee-item">Technology &amp; Leadership <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Fashion Technology <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Miabrita <span class="marquee-dot">✦</span></span>
     <span class="marquee-item">High Fashion <span class="marquee-dot">✦</span></span>
     <span class="marquee-item">Editorial <span class="marquee-dot">✦</span></span>
     <span class="marquee-item">Pageantry <span class="marquee-dot">✦</span></span>
     <span class="marquee-item">Commercial <span class="marquee-dot">✦</span></span>
     <span class="marquee-item">Nairobi · Kenya <span class="marquee-dot">✦</span></span>
-    <span class="marquee-item">Technology &amp; Leadership <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Fashion Technology <span class="marquee-dot">✦</span></span>
   </div>
 </div>
 
 <!-- ── CHAPTER 1: IDENTITY ── -->
 <div id="identity">
   <div class="identity-image reveal">
-    <img src="portrait.jpg" alt="Nyambeka Bridgit" style="width:100%; height:100%; object-fit:cover; display:block;">
+    <img src="Miabritaportrait.jpeg" alt="Nyambeka Bridgit" style="width:100%; height:100%; object-fit:cover; display:block;">
     <div class="identity-image-border"></div>
   </div>
   <div class="identity-text">
-    <p class="section-label reveal">Chapter 01 — Identity</p>
+    <p class="section-label reveal">Chapter 01 — The Person</p>
     <h2 class="reveal reveal-delay-1">
-      Born from<br><em>the pulse</em><br>of Nairobi
+      More than<br><em>the frame</em>
     </h2>
     <p class="reveal reveal-delay-2">
-      Nyambeka Bridgit is a Kenyan model with a dynamic presence that spans pageantry, high fashion, and commercial modeling. Known for her poise, versatility, and captivating confidence, she moves effortlessly between the runway, editorial storytelling, and brand campaigns.
+      Nyambeka Bridgit Gichana is a Kenyan model, creative and Bachelor of Science in Applied Computing student based in Nairobi. Her work sits at the intersection of fashion, technology, leadership, sustainability and African identity.
     </p>
     <div class="pull-quote reveal reveal-delay-3">
       "I don't just wear clothes — I tell stories through every frame, every step, every look."
     </div>
     <p class="reveal reveal-delay-4">
-      Beyond modeling, Nyambeka is passionate about technology and leadership — bringing a forward-thinking, purpose-driven perspective to her work and growing platform. She is proof that a model can be a multidimensional creative force.
+      She is building a personal platform that moves from the runway into fashion design, creative direction, digital innovation and impact. Rooted in Kenya and shaped by the world, Nyambeka is developing a future where African creativity is modern, purposeful and globally relevant.
     </p>
+    <div class="identity-credentials reveal reveal-delay-4">
+      <p class="identity-credential"><strong>Pageantry</strong>Face of Africa International 2026 finalist</p>
+      <p class="identity-credential"><strong>Research &amp; innovation</strong>KCA University recognition</p>
+      <p class="identity-credential"><strong>Creative ecosystem</strong>Miabrita fashion &amp; sustainability</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── CURRENT FOCUS ── -->
+<div id="current-focus">
+  <div class="current-focus-header">
+    <div>
+      <p class="section-label reveal">What is happening now</p>
+      <h2 class="current-focus-title reveal reveal-delay-1">Current<br><em>focus</em></h2>
+    </div>
+    <p class="current-focus-note reveal reveal-delay-2">Three creative directions shaping the Miabrita platform right now.</p>
+  </div>
+  <div class="focus-grid">
+    <article class="focus-item reveal">
+      <p class="focus-number">01 / 03</p>
+      <h3>High Fashion</h3>
+      <p>Editorial presence, runway energy and expressive fashion stories built around transformation.</p>
+    </article>
+    <article class="focus-item reveal reveal-delay-1">
+      <p class="focus-number">02 / 03</p>
+      <h3>Pageantry</h3>
+      <p>Miss Prom KCA University Town Campus 2026, alongside pageantry, advocacy and leadership.</p>
+    </article>
+    <article class="focus-item reveal reveal-delay-2">
+      <p class="focus-number">03 / 03</p>
+      <h3>Commercial Collaborations</h3>
+      <p>Available for fashion, beauty, lifestyle and creative campaigns that need a distinct point of view.</p>
+    </article>
   </div>
 </div>
 
 <!-- ── CHAPTER 2: PORTFOLIO ── -->
 <div id="portfolio">
   <div class="portfolio-header">
-    <h2 class="portfolio-title reveal">The Work</h2>
+    <h2 class="portfolio-title reveal">The Modeling File</h2>
     <ul class="portfolio-categories reveal">
       <li><button class="active" onclick="filterPortfolio(this, 'all')">All</button></li>
       <li><button onclick="filterPortfolio(this, 'fashion')">High Fashion</button></li>
@@ -991,7 +1201,7 @@
       <li><button onclick="filterPortfolio(this, 'pageantry')">Pageantry</button></li>
     </ul>
   </div>
-  <p class="section-label reveal">Chapter 02 — Portfolio</p>
+  <p class="section-label reveal">Chapter 02 — Modeling &amp; Pageantry</p>
   <div class="portfolio-grid">
     <div class="portfolio-item reveal" data-cat="fashion">
       <img src="fashion-1.jpg" alt="High Fashion" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;">
@@ -1025,7 +1235,7 @@
       <div class="portfolio-overlay">
         <div class="portfolio-overlay-text">
           <p class="portfolio-overlay-cat">Pageantry</p>
-          <p class="portfolio-overlay-name">Crown Moments</p>
+          <p class="portfolio-overlay-name">Crown of Impact</p>
         </div>
       </div>
     </div>
@@ -1053,7 +1263,7 @@
 <!-- ── CHAPTER 3: TRANSFORMATION ── -->
 <div id="transformation">
   <div class="transform-section-title">
-    <p class="section-label reveal">Chapter 03 — Transformation</p>
+    <p class="section-label reveal">Chapter 03 — Many Mediums</p>
     <h2 class="reveal reveal-delay-1">She contains multitudes</h2>
   </div>
   <div class="transformation-inner">
@@ -1062,7 +1272,7 @@
       <div class="transform-divider"></div>
       <div class="transform-panel-label">
         <span>01</span>
-        <h3>The Runway</h3>
+        <h3>The Model</h3>
       </div>
     </div>
     <div class="transform-panel reveal reveal-delay-1">
@@ -1070,14 +1280,14 @@
       <div class="transform-divider"></div>
       <div class="transform-panel-label">
         <span>02</span>
-        <h3>The Editorial</h3>
+        <h3>The Designer</h3>
       </div>
     </div>
     <div class="transform-panel reveal reveal-delay-2">
       <img src="transform-3.jpg" alt="The Vision" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
       <div class="transform-panel-label">
         <span>03</span>
-        <h3>The Vision</h3>
+        <h3>The Technologist</h3>
       </div>
     </div>
   </div>
@@ -1089,26 +1299,26 @@
   <p class="vision-statement reveal reveal-delay-1">
     Fashion is the <em>language</em>.<br>
     Technology is the <em>future</em>.<br>
-    Leadership is the <em>mission</em>.
+    Impact is the <em>mission</em>.
   </p>
   <p class="reveal reveal-delay-2" style="font-size:0.85rem; line-height:1.9; color:rgba(245,240,235,0.55); max-width:600px; margin:0 auto;">
-    Nyambeka Bridgit believes the most powerful models are also thinkers — building platforms, inspiring communities, and shaping culture beyond the frame.
+    Nyambeka believes the most powerful creatives are also thinkers — building platforms, inspiring communities, and shaping culture beyond the frame.
   </p>
   <div class="vision-pillars">
     <div class="pillar reveal">
       <p class="pillar-num">01</p>
       <h3>Technology</h3>
-      <p>Exploring the intersection of fashion and emerging technology — from digital runways to AI-powered creative direction.</p>
+      <p>Studying Applied Computing at KCA University while exploring AI, digital innovation, fashion technology and creative tools.</p>
     </div>
     <div class="pillar reveal reveal-delay-1">
       <p class="pillar-num">02</p>
       <h3>Leadership</h3>
-      <p>Mentoring the next generation of African models and creatives, championing representation at every level of the industry.</p>
+      <p>Growing through youth leadership, campus initiatives and a commitment to representation, education and opportunity for African creatives.</p>
     </div>
     <div class="pillar reveal reveal-delay-2">
       <p class="pillar-num">03</p>
-      <h3>Global Reach</h3>
-      <p>Rooted in Kenya, shaped by the world — ready to represent and collaborate across continents, cultures, and creative disciplines.</p>
+      <h3>Sustainability</h3>
+      <p>Exploring upcycling, recycling and sustainable fashion as tools for environmental education, community impact and creative expression.</p>
     </div>
   </div>
 </div>
@@ -1118,10 +1328,10 @@
   <div class="video-wrapper reveal">
 
     <!-- ── OPTION A: Local video file ── -->
-    <!-- Rename your video file to showreel.mp4 and put it in the same folder as this HTML file -->
+    <!-- Rename your video file to showreel.MP4 and put it in the same folder as this HTML file -->
     <!-- Then delete the YouTube section below and uncomment this block: -->
     <video autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-      <source src="showreel.mp4" type="video/mp4">
+      <source src="showreel.MP4" type="video/mp4">
     </video>
     <div style="position:absolute;inset:0;background:rgba(0,0,0,0.35);"></div>
     
@@ -1137,7 +1347,7 @@
       allowfullscreen>
     </iframe> 
     -->
-    <p class="video-label">Showreel 2026</p>
+    <p class="video-label">The Work / 2026</p>
     <p class="video-year">Chapter 05 · Video</p>
   </div>
 </div>
@@ -1148,7 +1358,7 @@
     I am not a moment — I am a movement.
   </p>
   <div class="signature-divider reveal reveal-delay-1"></div>
-  <p class="signature-name reveal reveal-delay-2">Nyambeka Bridgit</p>
+  <p class="signature-name reveal reveal-delay-2">Miabrita · Nyambeka Bridgit</p>
 </div>
 
 <!-- ── CHAPTER 7: CONTACT ── -->
@@ -1159,7 +1369,7 @@
     <div class="contact-details">
       <div class="contact-detail reveal reveal-delay-2">
         <span class="contact-detail-label">Representation</span>
-        <span class="contact-detail-value">Your Agency Name Here</span>
+        <span class="contact-detail-value">Available for campaigns, editorials, pageantry and creative collaborations</span>
       </div>
       <div class="contact-detail reveal reveal-delay-2">
         <span class="contact-detail-label">Email</span>
@@ -1171,9 +1381,9 @@
       </div>
     </div>
     <ul class="social-links reveal reveal-delay-4">
-     <li><a href="https://instagram.com/https://miabrita_?igsh=eTAzcDQ4Ym91Z3Zs" target="_blank">Instagram</a></li>
-     <li><a href="https://linkedin.com/in/yourhandle" target="_blank">LinkedIn</a></li>
-     <li><a href="https://tiktok.com/@yourhandle" target="_blank">TikTok</a></li>
+    <li><a href="https://instagram.com/miabrita_" target="_blank" rel="noopener">Instagram</a></li>
+    <li><a href="https://linkedin.com/in/nyambeka-bridgit" target="_blank" rel="noopener">LinkedIn</a></li>
+    <li><a href="https://tiktok.com/@miabrita_" target="_blank" rel="noopener">TikTok</a></li>
     </ul>
   </div>
   <div class="contact-form reveal reveal-delay-2">
@@ -1198,7 +1408,7 @@
   <p>Designed with precision &amp; purpose.</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // ── SMOOTH SCROLL NAV
   function navScrollTo(id) {
     const el = document.getElementById(id);
