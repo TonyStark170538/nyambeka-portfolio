@@ -298,6 +298,8 @@
   .identity-image {
     position: relative;
     aspect-ratio: 3/4;
+    width: 88%;
+    justify-self: center;
     background: linear-gradient(160deg, #1a1510, #2a1f15);
     overflow: visible;
   }
@@ -454,6 +456,71 @@
     font-size: 0.75rem;
     line-height: 1.7;
     color: rgba(245,240,235,0.52);
+  }
+  .focus-lookbook {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+  }
+  .lookbook-card {
+    position: relative;
+    min-height: 22rem;
+    overflow: hidden;
+    border: 1px solid rgba(232,213,176,0.18);
+    background: #171311;
+  }
+  .lookbook-card:nth-child(2) { background: #10202a; }
+  .lookbook-card:nth-child(3) { background: #24131b; }
+  .lookbook-placeholder {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background:
+      linear-gradient(135deg, rgba(226,118,84,0.2), transparent 48%),
+      repeating-linear-gradient(135deg, rgba(245,240,235,0.05) 0 1px, transparent 1px 12px);
+  }
+  .lookbook-card:nth-child(2) .lookbook-placeholder {
+    background:
+      linear-gradient(135deg, rgba(73,151,177,0.22), transparent 48%),
+      repeating-linear-gradient(45deg, rgba(245,240,235,0.05) 0 1px, transparent 1px 12px);
+  }
+  .lookbook-card:nth-child(3) .lookbook-placeholder {
+    background:
+      linear-gradient(135deg, rgba(226,118,84,0.2), transparent 48%),
+      repeating-linear-gradient(135deg, rgba(245,240,235,0.05) 0 1px, transparent 1px 12px);
+  }
+  .lookbook-placeholder span {
+    padding: 0.7rem 1rem;
+    border: 1px solid rgba(245,240,235,0.35);
+    color: rgba(245,240,235,0.75);
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .lookbook-caption {
+    position: absolute;
+    left: 1.2rem;
+    right: 1.2rem;
+    bottom: 1.2rem;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+  .lookbook-caption strong {
+    display: block;
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 300;
+  }
+  .lookbook-caption span {
+    color: #e27654;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
   }
 
   /* ─── CHAPTER 2: PORTFOLIO ─── */
@@ -978,7 +1045,7 @@
     width: 62%;
     background:
       linear-gradient(90deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.18) 45%, rgba(10,10,10,0.04) 100%),
-      url('portrait.jpg') center 20% / cover no-repeat;
+      url('mia.jpeg') center 20% / cover no-repeat;
     filter: saturate(0.85) contrast(1.08);
     clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
@@ -1034,17 +1101,84 @@
   .video-wrapper { border-top: 1px solid rgba(226,118,84,0.35); border-bottom: 1px solid rgba(226,118,84,0.35); }
   .video-label { color: rgba(245,240,235,0.32); }
 
+  /* ─── EDITORIAL MASTHEAD ─── */
+  body {
+    background: #0b0a09;
+  }
+  nav {
+    padding: 1.6rem 3rem;
+    border-bottom: 1px solid rgba(245,240,235,0.12);
+    mix-blend-mode: normal;
+    background: linear-gradient(to bottom, rgba(11,10,9,0.62), transparent);
+  }
+  .nav-logo {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+  }
+  .nav-links { gap: 2rem; }
+  .nav-links a { font-size: 0.62rem; letter-spacing: 0.18em; }
+  #hero {
+    min-height: 100svh;
+    padding: 7rem 3rem 5rem;
+  }
+  .hero-bg {
+    background: #0b0a09;
+  }
+  .hero-image-placeholder {
+    width: 68%;
+    clip-path: none;
+    background-position: center 22%;
+  }
+  .hero-content {
+    max-width: 620px;
+    padding-bottom: 1rem;
+  }
+  .hero-title {
+    font-size: clamp(4.5rem, 10vw, 8.5rem);
+    line-height: 0.86;
+  }
+  .hero-name-small { letter-spacing: 0.32em; }
+  .hero-sub { color: rgba(245,240,235,0.68); }
+  .marquee-section {
+    margin: 0;
+    padding: 1.1rem 0;
+    border-color: rgba(245,240,235,0.14);
+    background: #0b0a09;
+  }
+  .marquee-item { font-size: 1rem; color: rgba(245,240,235,0.58); }
+  #identity, #current-focus, #portfolio, #vision, #contact {
+    max-width: 1280px;
+  }
+  #identity { padding-top: 9rem; }
+  .identity-image { box-shadow: 1rem 1rem 0 rgba(226,118,84,0.32); }
+  .identity-image-border { inset: 1rem; border-color: rgba(245,240,235,0.35); }
+  .focus-grid { border-color: rgba(245,240,235,0.2); }
+  .focus-item { min-height: 13rem; }
+  .lookbook-card { min-height: 25rem; }
+  .portfolio-header { margin-bottom: 3rem; }
+  .portfolio-grid { gap: 0.5rem; }
+  .portfolio-item, .transform-panel { border-color: rgba(245,240,235,0.28); }
+  .portfolio-overlay { opacity: 1; padding: 1.4rem; }
+  .portfolio-overlay-text { transform: translateY(0); }
+  #signature { padding-top: 11rem; padding-bottom: 11rem; }
+
   /* ─── RESPONSIVE ─── */
   @media (max-width: 768px) {
-    nav { padding: 1.5rem 2rem; }
+    nav { padding: 1.3rem 1.5rem; }
     .nav-links { display: none; }
-    #hero { padding: 6rem 2rem; }
+    #hero { padding: 6rem 1.5rem 3rem; }
+    .hero-image-placeholder { width: 100%; opacity: 0.72; }
+    .hero-bg { background: #0b0a09; }
+    .hero-content { max-width: 100%; }
     section { padding: 6rem 2rem; }
     #identity {
       grid-template-columns: 1fr;
       gap: 4rem;
       padding: 6rem 2rem;
     }
+    .identity-image { width: 100%; }
     .identity-credentials { grid-template-columns: 1fr; }
     #current-focus { padding: 2rem 2rem 6rem; }
     .current-focus-header { display: block; }
@@ -1052,6 +1186,8 @@
     .focus-grid { grid-template-columns: 1fr; }
     .focus-item { border-right: 0; border-bottom: 1px solid rgba(245,240,235,0.14); }
     .focus-item:last-child { border-bottom: 0; }
+    .focus-lookbook { grid-template-columns: 1fr; }
+    .lookbook-card { min-height: 18rem; }
     .portfolio-grid {
       grid-template-columns: 1fr 1fr;
     }
@@ -1136,7 +1272,7 @@
 <!-- ── CHAPTER 1: IDENTITY ── -->
 <div id="identity">
   <div class="identity-image reveal">
-    <img src="Miabritaportrait.jpeg" alt="Nyambeka Bridgit" style="width:100%; height:100%; object-fit:cover; display:block;">
+    <img src="Miabritaportrait.jpeg" alt="Miabrita portrait" style="width:100%; height:100%; object-fit:cover; display:block;">
     <div class="identity-image-border"></div>
   </div>
   <div class="identity-text">
@@ -1185,6 +1321,29 @@
       <p class="focus-number">03 / 03</p>
       <h3>Commercial Collaborations</h3>
       <p>Available for fashion, beauty, lifestyle and creative campaigns that need a distinct point of view.</p>
+    </article>
+  </div>
+  <div class="focus-lookbook" aria-label="Miabrita current focus lookbook">
+    <article class="lookbook-card reveal">
+      <div class="lookbook-placeholder"><span>add high-fashion photo</span></div>
+      <div class="lookbook-caption">
+        <strong>High Fashion</strong>
+        <span>Look 01</span>
+      </div>
+    </article>
+    <article class="lookbook-card reveal reveal-delay-1">
+      <div class="lookbook-placeholder"><span>add pageantry photo</span></div>
+      <div class="lookbook-caption">
+        <strong>Pageantry</strong>
+        <span>Look 02</span>
+      </div>
+    </article>
+    <article class="lookbook-card reveal reveal-delay-2">
+      <div class="lookbook-placeholder"><span>add collaboration photo</span></div>
+      <div class="lookbook-caption">
+        <strong>Commercial</strong>
+        <span>Look 03</span>
+      </div>
     </article>
   </div>
 </div>
